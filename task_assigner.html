@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaiburr Task1 Task Assigner</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1><b>Welcome to the Task Assigner</b></h1>
+    <br>
+
+    <script>
+        
+    function insertDateTime() {
+        var currentDate = new Date();
+        var starTimeField = document.getElementById("startTime");
+        starTimeField.value = currentDate;
+    }
+    </script>
+
+    <form action="http://127.0.0.1:5000/submit" method="POST" id="myform">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Task name" required>
+        <br>
+        <label for="assignee">Assignee</label>
+        <input type="text" id="assignee" name="assignee" placeholder="John Smith" required>
+        <br>
+        <label for="project">Project</label>
+        <input type="text" id="project" name="project" placeholder="Kaiburr" required>
+        <br>
+        <label for="property">Assigned to</label>
+        <input type="text" id="property" name="property" placeholder="Udit" required>
+        <br>
+        <label for="startTime">StartTime</label>
+        <input type="text" id="startTime" name="startTime" readonly>
+        <br>
+        <br>
+        <button type="submit" onclick="insertDateTime()">Assign</button>
+    </form>
+    <a href="task_manager.html"> Go to Task Manager</a>
+</body>
+</html>
